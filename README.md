@@ -11,3 +11,4 @@ Course Website: https://timetable.nycu.edu.tw/?r=main/crsoutline&Acy=113&Sem=1&C
 * Lab 2: Matrix Multiplication Simulation
 * Lab 3: Simple ALU
 * Lab 4: Push Button and LED Control
+* Lab 5: Character LCD Control
