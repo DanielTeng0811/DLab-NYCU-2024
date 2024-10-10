@@ -9,7 +9,7 @@ module lab4(
 reg [3:0] usr_led;
 wire [3:0] btn, btnIsPressed;
 reg [3:0] beforeClk_btn, brightness;
-reg signed [3:0] counter = 0;
+reg [3:0] counter = 0;
 reg [19:0] pwm = 0;
 
 checkdb button0(clk, usr_btn[0], btn[0]);
@@ -36,9 +36,9 @@ always@(posedge clk)begin
     if(!reset_n)
         counter = 0;
     else begin
-        if(btnIsPressed[1] == 1 && counter < 7)
+      if(btnIsPressed[1] == 1 && counter < 15)
             counter <= counter + 1;
-        else if(btnIsPressed[0] == 1 && counter > -8 )
+      else if(btnIsPressed[0] == 1 && counter > 0 )
             counter <= counter - 1;
         if(btnIsPressed[2] == 1 && brightness < 4)
             brightness <= brightness + 1;
